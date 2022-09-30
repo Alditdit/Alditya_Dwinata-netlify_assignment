@@ -1,0 +1,250 @@
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+/* bagian container */
+
+.container {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.2fr 8fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "navbar"
+    "main"
+    "footer";   
+}
+
+/* bagian navbar */
+.navbar {
+    grid-area: navbar;
+    background-color:#FCFFB2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar > a {
+    font-size: large;
+}
+
+
+/* bagian main */
+
+.main {
+    grid-area: main;
+    background-color: #C7F2A4;
+}
+
+    /* bagian container2 */
+    .container2 {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 0.fr 1fr 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "bio bio"
+        "about about"
+        "riwayat riwayat"
+        "project project"
+        "form form"; 
+    }
+
+    /* bagian bio */
+
+    .bio {
+        grid-area: bio;
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+    }
+   
+    .flex-bio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #E1FFB1;
+        height: 50vh;
+        flex-direction: row;
+    }
+
+    
+
+    .flex-bio div {
+        width: 200px;
+        height: 200px;
+        margin: 60px;
+        
+
+    }
+
+    .item-bio img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+
+    }
+
+    
+   
+    /* bagian about */
+    
+    .about {
+        grid-area: about;
+        padding: 20px 50px 20px 50px;
+        text-align: justify;
+    }
+
+    /* bagian riwayat */
+    .riwayat {
+        grid-area: riwayat;
+        text-align: center;
+    }
+
+    .container-riwayat {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 30px 30px; 
+        grid-template-areas: 
+            "img1 text1"
+            "img2 text2"; 
+        padding: 10px 50px 10px 50px;
+    }
+
+    .img1 {
+        grid-area: img1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .img2 {
+        grid-area: img2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .text1 {
+        grid-area: text1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .text2 {
+        grid-area: text2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    /* bagian project */
+
+    .project {
+        grid-area: project;
+        text-align: center;
+        padding: 20px 40px 20px 40px;
+    }
+
+    .project ul {
+        text-align: justify;
+    }
+
+    /* bagian form */
+
+    .form {
+        grid-area: form;
+        padding: 20px;
+    }
+
+    .form form {
+        text-align: center;
+    }
+
+    .form h1 {
+        text-align: center;
+    }
+
+
+    
+/* bagian footer */
+
+.footer {
+    grid-area: footer;
+    background-color: #B6E388;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1080px) {
+    .navbar {
+        grid-area: navbar;
+        background-color: #B6E388;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .bio {
+        grid-area: bio;
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+    }
+   
+    .flex-bio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #FCFFB2;
+        flex-direction: column;
+    }
+
+    
+
+    .flex-bio div {
+        width: 200px;
+        height: 200px;
+        margin: 0px;
+
+    }
+
+    .item-bio img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+
+    }
+    
+}
